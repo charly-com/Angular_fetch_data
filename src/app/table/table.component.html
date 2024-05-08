@@ -1,0 +1,19 @@
+<table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Body</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let post of paginatedData">
+        <td>{{ post.title }}</td>
+        <td>{{ post.body }}</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <button (click)="prevPage()" [disabled]="!hasPrevPage()">Previous</button>
+  <button (click)="nextPage()" [disabled]="!hasNextPage()">Next</button>
+  
+  
